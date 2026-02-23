@@ -1,0 +1,407 @@
+/* 
+  LAYOUT STYLING
+  anything related to spacing, flexbox, sizing, max-width, positioning, structure
+*/
+
+/* page padding is layout */
+body {
+    padding: 2rem;
+  }
+  
+  .element {
+    margin-top: 80px;
+    /*TASK 2: ADD SPACE B/W SECTION ELEMENTS, because in index.html we have elements inside sections */
+    padding-bottom: 2rem;
+  }
+  
+  p {
+    margin-top: 0;
+    /*TASK 5 Shorten the default width of the <p> element.. BUT still ensuring responsiveness 
+      this was taught in the inclass sample */
+    max-width: 60rem;
+  }
+  
+  code {
+    padding: 0.5rem;
+    display: block;
+  }
+  
+  
+  
+  /* -----------------------------
+     FORM LABEL + TEXT INPUTS
+  ------------------------------ */
+  
+  /* Light spacing so forms don’t feel cramped */
+  form {
+    margin-top: 0.5rem;
+  }
+  
+  input[type="text"] {
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 20rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* -----------------------------
+     FLEX FIX: FORM GROUP + ACTIONS
+     learnt this from building forms by shay howe's site + also used w3 schools site to understand display options  https://www.w3schools.com/css/css3_flexbox.asp
+  ------------------------------ */
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    /* space under the row */
+  }
+  
+  /* override  global label block ONLY inside the flex row */
+  .form-group label {
+    display: inline-block;
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+  
+  .form-group input[type="text"] {
+    flex: 1;
+    max-width: 25rem;
+    margin-bottom: 0;
+    /* important so it doesn't push the row */
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  /*used for side-by-side inputs like expiry + CVV */
+  .form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+    min-width: 12rem;
+  }
+  
+  
+  
+  /* -----------------------------
+     RADIO BUTTON WITH LABEL
+  ------------------------------ */
+  
+  .radio-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  
+  /* -----------------------------
+     IMAGE AS A LINK
+  ------------------------------ */
+  
+  /* Base image behavior when used as a link */
+  a img {
+    height: auto;
+    max-width: 280px;
+    /* reduce image size */
+  }
+  
+  
+  
+  /* -----------------------------
+     MAIN NAVIGATION
+  ------------------------------ */
+  
+  #combined_elements nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  /* reusable main navigation layout */
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    padding: 0.75rem 1.25rem;
+  }
+  
+  
+  
+  
+  /* -----------------------------
+     PRODUCT / SERVICE LISTING
+  ------------------------------ */
+  
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 60rem;
+  }
+  
+  .service-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.25rem;
+  }
+  
+  .service-item img {
+    width: 260px;
+    /* consistent width */
+    height: 180px;
+    /* consistent height */
+    object-fit: cover;
+    /* keeps images same size without stretching */
+    flex-shrink: 0;
+  }
+  
+  .service-text {
+    max-width: 38rem;
+  }
+
+
+/* ---------------------------------
+   TWO COLUMN SERVICE LISTING (LARGER SCREENS)
+   learnt from prof flexbox / week 3 lec code
+---------------------------------- */
+@media (min-width: 50rem) {
+
+    /* switch to a 2-column grid for the listings */
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem;
+    }
+  
+    /* cards stack vertically so they fit nicely in a column */
+    .service-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .service-item img {
+      width: 100%;
+      max-width: none;
+      height: 180px;
+      object-fit: cover;
+    }
+  
+    .service-text {
+      max-width: none;
+    }
+  }
+  
+  
+  
+  /* 
+     PAYMENT FORM
+   */
+  
+  .payment-form {
+    max-width: 60rem;
+  }
+  
+  .payment-form fieldset {
+    padding: 1rem 1.25rem;
+    margin: 0 0 1rem 0;
+  }
+  
+  /* keep input width controlled inside payment form */
+  .payment-form input[type="text"] {
+    max-width: 28rem;
+  }
+  
+  
+  
+  /* -----------------------------
+     CHECKOUT CART
+  ------------------------------ */
+  
+  .cart-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    max-width: 45rem;
+  }
+  
+  .cart-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+  }
+  
+  .cart-text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Divider */
+  .cart-divider {
+    margin: 1.5rem 0;
+    max-width: 45rem;
+  }
+  
+  /* Total row */
+  .cart-total {
+    display: flex;
+    justify-content: space-between;
+    max-width: 45rem;
+  }
+  
+  
+  
+  /* 
+    BRAND COMPONENTS (FONT + COLOR VISUAL SAMPLES) -------------------
+  
+  */
+  
+  .font-sample {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .color-palette {
+    padding-left: 1.2rem;
+  }
+  
+  .color-palette li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .swatch {
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+  
+  
+  
+  /* 
+     BRAND HERO (COMPOSITION SAMPLE)
+  */
+  
+  .brand-hero {
+    position: relative;
+    max-width: 60rem;
+    overflow: hidden;
+    padding: 6rem 2rem;
+    margin-top: 1rem;
+  }
+  
+  /* background image */
+  .brand-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* keep text above the image */
+  .brand-hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .brand-hero h1 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .brand-hero-box {
+    padding: 1rem 1.25rem;
+  }
+  
+  .brand-hero-box p:last-child {
+    margin-bottom: 0;
+  }
+  
+  
+  
+  /* -------------------------------------------------
+     BRAND COMPOSITION SAMPLE
+     Shows fonts + colors + imagery together.
+  -------------------------------------------------- */
+  
+  .brand-sample img {
+    max-width: 320px;
+    height: auto;
+  }
+  
+  .brand-body {
+    max-width: 45rem;
+  }
+  
+  /* Keep imagery samples reasonable (so they don't display huge) */
+  .imagery-samples img {
+    max-width: 220px;
+    height: auto;
+  }
+  
+
+
+
+/* -------------------------------------------------
+   PAGE TEMPLATES (PRODUCT LISTING + CHECKOUT)
+   layout-only helpers so you can reuse these blocks
+-------------------------------------------------- */
+
+
+.page-template {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+/* PRODUCT / SERVICE LISTING PAGE (multiple listings) */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 70rem;
+}
+
+.product-card {
+  flex: 1 1 15rem; /* grows, shrinks, and starts at 15rem */
+  min-width: 15rem;
+}
+
+/* CHECKOUT PAGE (cart + payment side-by-side when there is room) */
+.checkout-layout {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 70rem;
+}
+
+.checkout-cart {
+  flex: 1 1 18rem;
+  max-width: 28rem;
+}
+
+.checkout-payment {
+  flex: 2 1 28rem;
+}
+
+/* responsive: stack + keep cart first on small screens */
+@media (max-width: 40em) {
+  .checkout-cart,
+  .checkout-payment {
+    max-width: 100%;
+  }
+}

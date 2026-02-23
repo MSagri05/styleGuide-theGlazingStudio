@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>P01 - Style Guide Template</title>
+
+  <!-- load the fonts so the examples actually show what the fonts look like -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@900&family=Noto+Sans:wght@400&display=swap"
+    rel="stylesheet">
+
+  <link href="css/layout.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <header>
+    <h1>P01 - Style Guide Template for company: The Glazing Studio</h1>
+    <p>A template you can use to start building out your own style guides with.</p>
+  </header>
+
+  <main>
+
+    <!-- INTERACTIVE ELEMENTS SECTION // -->
+    <section id="interactive_elements">
+      <h2>Interactive Elements</h2>
+
+      <section class="element">
+        <h3>In-text link</h3>
+
+        <!-- learnt from https://www.w3schools.com/html/html_links.asp, _self opens the document in the same window/tab as it was clicked-->
+        <p><strong>Code:</strong></p>
+        <code>
+          &lt;p&gt;
+            Learn more about our 
+            &lt;a href="#classes" target="_self"&gt;pottery painting classes&lt;/a&gt; 
+            for all skill levels.
+          &lt;/p&gt;
+        </code>
+
+        <p><strong>Rendered element:</strong></p>
+        <p>
+          Learn more about our
+          <a href="#classes" target="_self">pottery painting classes</a>
+          for all skill levels.
+        </p>
+      </section>
+
+      <!-- Default Button styling section -->
+      <section class="element">
+
+        <h3>Navigation Link</h3>
+
+        <p><strong>CSS selector:</strong></p>
+        <p>.button-nav</p>
+
+        <p><strong>Sample code:</strong></p>
+        <code>
+    &lt;a href="#contact" class="button-nav"&gt;Contact Us&lt;/a&gt;
+  </code>
+
+        <p><strong>Rendered element:</strong></p>
+        <a class="button-nav" href="#contact">Contact Us</a>
+
+      </section>
+
+
+      <section class="element">
+        <h3>Submit/Reset Buttons</h3>
+
+        <!-- learnt from https://www.w3schools.com/html/html_buttons.asp  -->
+
+        <p><strong>Code:</strong></p>
+        <code>
+        &lt;form&gt;<br>
+        &nbsp;&nbsp;&lt;div class="form-group"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="name"&gt;Your name:&lt;/label&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="name" name="name"&gt;<br>
+        &nbsp;&nbsp;&lt;/div&gt;<br>
+        &nbsp;&nbsp;&lt;div class="form-actions"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="submit"&gt;Submit&lt;/button&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="reset"&gt;Reset&lt;/button&gt;<br>
+        &nbsp;&nbsp;&lt;/div&gt;<br>
+        &lt;/form&gt;
+      </code>
+
+        <p><strong>Rendered element:</strong></p>
+        <form>
+          <div class="form-group">
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name">
+          </div>
+
+          <div class="form-actions">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+
+
+
+      <section class="element">
+        <h3>Text Input Field with Label</h3>
+
+        <p><strong>Code:</strong></p>
+        <code>
+        &lt;form&gt;<br>
+        &nbsp;&nbsp;&lt;div class="form-group"&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="email"&gt;Email address:&lt;/label&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="email" name="email"&gt;<br>
+        &nbsp;&nbsp;&lt;/div&gt;<br>
+        &lt;/form&gt;
+      </code>
+
+        <p><strong>Rendered element:</strong></p>
+        <form>
+          <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="text" id="email" name="email">
+          </div>
+        </form>
+      </section>
+
+
+      <!-- radio button means like a multiple choice with options-->
+      <!--  learnt about radio button with labels from : https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_radio-->
+
+      <!-- radio button means like a multiple choice with options-->
+      <!--  learnt about radio button with labels from : https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_radio-->
+      <section class="element">
+        <h3>Radio Button with Label</h3>
+
+        <p><strong>Code:</strong></p>
+        <code>
+          &lt;form&gt;<br>
+          &nbsp;&nbsp;&lt;p&gt;How many people are you reserving for?&lt;/p&gt;<br>
+          &nbsp;&nbsp;&lt;div class="radio-group"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="one" name="group_size" value="1"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="one"&gt;1 person&lt;/label&gt;<br>
+          &nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;div class="radio-group"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="two" name="group_size" value="2"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="two"&gt;2 people&lt;/label&gt;<br>
+          &nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;div class="radio-group"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="three" name="group_size" value="3"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="three"&gt;3 people&lt;/label&gt;<br>
+          &nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;div class="radio-group"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="fourplus" name="group_size" value="4+"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="fourplus"&gt;4+ people&lt;/label&gt;<br>
+          &nbsp;&nbsp;&lt;/div&gt;<br>
+          &lt;/form&gt;
+        </code>
+
+        <p><strong>Rendered element:</strong></p>
+        <form>
+          <p>How many people are you reserving for?</p>
+
+          <div class="radio-group">
+            <input type="radio" id="one" name="group_size" value="1">
+            <label for="one">1 person</label>
+          </div>
+
+          <div class="radio-group">
+            <input type="radio" id="two" name="group_size" value="2">
+            <label for="two">2 people</label>
+          </div>
+
+          <div class="radio-group">
+            <input type="radio" id="three" name="group_size" value="3">
+            <label for="three">3 people</label>
+          </div>
+
+          <div class="radio-group">
+            <input type="radio" id="fourplus" name="group_size" value="4+">
+            <label for="fourplus">4+ people</label>
+          </div>
+        </form>
+      </section>
+
+
+      <section class="element">
+        <h3>Image as a Link</h3>
+
+        <!-- learnt from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_image-->
+        <!-- opens in a new window because i used taregt = _blank-->
+        <!-- Image used as a navigation link to book a group pottery painting session -->
+
+        <!-- image source: https://socialpottery.com/children/ -->
+        <p><strong>Code:</strong></p>
+        <code>
+    &lt;a href="#classes"&gt;<br>
+    &nbsp;&nbsp;&lt;img src="img/group_painting.png" alt="Group of people painting pottery together in a glazing studio"&gt;<br>
+    &lt;/a&gt;<br>
+    &lt;p&gt;Book your group pottery painting session today.&lt;/p&gt;
+  </code>
+
+        <p><strong>Rendered element:</strong></p>
+        <a href="#classes">
+          <img src="img/group_painting.png" alt="Group of people painting pottery together in a glazing studio">
+        </a>
+        <p>Book your group pottery painting session today.</p>
+      </section>
+
+    </section>
+    <!-- // INTERACTIVE ELEMENTS SECTION -->
+
+    <!-- TEXT ELEMENTS SECTION // -->
+    <section id="text_elements">
+      <h2>Text Elements</h2>
+
+      <section class="element">
+        <h3>Headings</h3>
+
+        <p><strong>Code:</strong></p>
+        <code>
+          &lt;h1&gt;The Glazing Studio&lt;/h1&gt;<br>
+          &lt;h2&gt;Pottery Painting Classes&lt;/h2&gt;<br>
+          &lt;h3&gt;Group &amp; Private Sessions&lt;/h3&gt;<br>
+          &lt;h4&gt;Perfect for beginners and creatives&lt;/h4&gt;
+        </code>
+
+        <p><strong>Rendered element:</strong></p>
+
+        <!-- Demonstrating heading hierarchy for style guide purposes -->
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+      </section>
+
+      <!-- this section was taught in class on Monday + I learnt this in IAT 235-->
+      <section class="element">
+        <h3>Paragraphs</h3>
+
+        <p><strong>Code:</strong></p>
+        <code>
+          &lt;p&gt;
+          Welcome to &lt;strong&gt;The Glazing Studio&lt;/strong&gt;, a creative space where you can relax, paint, and bring ceramic pieces to life. Our studio offers walk-in pottery painting sessions as well as guided classes designed for all skill levels, from first-time painters to experienced creatives.&lt;br&gt;&lt;br&gt;
+
+          Whether you are visiting solo, with friends, or planning a group event, we provide a calm and welcoming environment with step-by-step support from our team. Each session allows you to create something personal, expressive, and completely your own.&lt;br&gt;&lt;br&gt;
+
+          At The Glazing Studio, we believe creativity should feel &lt;em&gt;accessible, enjoyable, and pressure-free&lt;/em&gt;, making it easy for anyone to explore pottery painting at their own pace.
+          &lt;/p&gt;
+        </code>
+
+        <p><strong>Rendered element:</strong></p>
+        <p>
+          Welcome to <strong>The Glazing Studio</strong>, a creative space where you can relax, paint, and bring ceramic
+          pieces to life. Our studio offers walk-in pottery painting sessions as well as guided classes designed for all
+          skill levels, from first-time painters to experienced creatives.<br><br>
+
+          Whether you are visiting solo, with friends, or planning a group event, we provide a calm and welcoming
+          environment with step-by-step support from our team. Each session allows you to create something personal,
+          expressive, and completely your own.<br><br>
+
+          At The Glazing Studio, we believe creativity should feel <em>accessible, enjoyable, and pressure-free</em>,
+          making it easy for anyone to explore pottery painting at their own pace.
+        </p>
+      </section>
+
+      <section class="element">
+        <h3>Numbered Lists</h3>
+
+        <!-- this section was taught in class on Monday -->
+
+        <p><strong>Code:</strong></p>
+        <code>
+            &lt;h4&gt;Pottery Painting Process:&lt;/h4&gt;<br><br>
+            &lt;ol&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Choose a ceramic piece from our studio collection.&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Select your glaze colors and start painting at your own pace.&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Leave your piece with us for glazing and firing in the kiln.&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Pick up your finished piece once it is ready.&lt;/li&gt;<br>
+            &lt;/ol&gt;
+          </code>
+
+        <p><strong>Rendered element:</strong></p>
+
+        <h4>Pottery Painting Process:</h4>
+        <ol>
+          <li>Choose a ceramic piece from our studio collection.</li>
+          <li>Select your glaze colors and start painting at your own pace.</li>
+          <li>Leave your piece with us for glazing and firing in the kiln.</li>
+          <li>Pick up your finished piece once it is ready.</li>
+        </ol>
+      </section>
+
+    </section>
+    <!-- // TEXT ELEMENTS SECTION -->
+
+    <!-- COMBINED ELEMENTS SECTION // -->
+    <section id="combined_elements">
+      <h2>Combined Elements</h2>
+
+      <section class="element">
+        <h3>Main Navigation</h3> <!-- identifying heading to fix validator warning -->
+
+        <p><strong>Code:</strong></p>
+        <code>
+          &lt;nav&gt;<br>
+          &nbsp;&nbsp;&lt;a href="#home"&gt;Home&lt;/a&gt;<br>
+          &nbsp;&nbsp;&lt;a href="#classes"&gt;Classes&lt;/a&gt;<br>
+          &nbsp;&nbsp;&lt;a href="#groups"&gt;Group Sessions&lt;/a&gt;<br>
+          &nbsp;&nbsp;&lt;a href="#about"&gt;About Us&lt;/a&gt;<br>
+          &nbsp;&nbsp;&lt;a href="#contact"&gt;Contact Us&lt;/a&gt;<br>
+          &lt;/nav&gt;
+        </code>
+
+        <p><strong>Rendered element:</strong></p>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#classes">Classes</a>
+          <a href="#groups">Group Sessions</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact Us</a>
+        </nav>
+      </section>
+
+
+      <section class="element">
+        <h3>Product / Service Listing</h3>
+
+        <!-- Product/service cards using semantic <article> elements .. was using dl earlier bit then i needed to add images so switche4d to article-->
+        <p><strong>Code:</strong></p>
+        <code>
+          &lt;div class="service-list"&gt;<br><br>
+
+          &nbsp;&nbsp;&lt;article class="service-item"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/image3.png" alt="Walk-in pottery painting sample piece and glaze colors"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="service-text"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Walk-In Pottery Painting&lt;/h4&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Paint at your own pace with a wide selection of ceramic pieces.&lt;/p&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="service-price"&gt;$25 per piece&lt;/p&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;/article&gt;<br><br>
+
+          &nbsp;&nbsp;&lt;article class="service-item"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/image4.png" alt="Guided pottery class session in progress"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="service-text"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Guided Pottery Classes&lt;/h4&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Instructor-led pottery painting sessions for all skill levels.&lt;/p&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="service-price"&gt;$45 per person&lt;/p&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;/article&gt;<br><br>
+
+          &nbsp;&nbsp;&lt;article class="service-item"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="img/group_painting.png" alt="Group pottery painting session at a shared table"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="service-text"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Group Pottery Painting Sessions&lt;/h4&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Ideal for birthdays, team events, and celebrations.&lt;/p&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="service-price"&gt;Starting at $40 per person&lt;/p&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;/article&gt;<br><br>
+
+          &lt;/div&gt;
+        </code>
+
+        <p><strong>Rendered element:</strong></p>
+        <div class="service-list">
+
+          <article class="service-item">
+            <a href="#classes">
+              <img src="img/image3.png" alt="Walk-in pottery painting sample piece and glaze colors">
+            </a>
+
+            <div class="service-text">
+              <h3>Walk-In Pottery Painting</h3>
+              <p>Paint at your own pace with a wide selection of ceramic pieces.</p>
+              <p class="service-price">$25 per piece</p>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <a href="#classes">
+              <img src="img/image4.png" alt="Guided pottery class session in progress">
+            </a>
+
+            <div class="service-text">
+              <h3>Guided Pottery Classes</h3>
+              <p>Instructor-led pottery painting sessions for all skill levels.</p>
+              <p class="service-price">$45 per person</p>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <a href="#groups">
+              <img src="img/group_painting.png" alt="Group pottery painting session at a shared table">
+            </a>
+
+            <div class="service-text">
+              <h3>Group Pottery Painting Sessions</h3>
+              <p>Ideal for birthdays, team events, and celebrations.</p>
+              <p class="service-price">Starting at $40 per person</p>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+
+
+      <section class="element" id="payment_form">
+        <h3>Payment Form</h3>
+
+        <p>This example shows a checkout form for a gift card purchase (text inputs + radio inputs + submit/reset).</p>
+
+        <p><strong>Code:</strong></p>
+        <code>
+          &lt;form class="payment-form"&gt;<br>
+          &nbsp;&nbsp;&lt;fieldset&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Buyer details&lt;/legend&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form-group"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="buyer_name"&gt;Name:&lt;/label&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="buyer_name" name="buyer_name"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form-group"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="buyer_email"&gt;Email:&lt;/label&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="buyer_email" name="buyer_email"&gt;<br>
+          &nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;/fieldset&gt;<br><br>
+
+          &nbsp;&nbsp;&lt;fieldset&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Gift card amount&lt;/legend&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="radio-group"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="amt_25" name="gift_amount" value="25"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="amt_25"&gt;$25&lt;/label&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="radio-group"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="amt_50" name="gift_amount" value="50"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="amt_50"&gt;$50&lt;/label&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="radio-group"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="amt_100" name="gift_amount" value="100"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="amt_100"&gt;$100&lt;/label&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;/fieldset&gt;<br><br>
+
+          &nbsp;&nbsp;&lt;fieldset&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Payment method&lt;/legend&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="radio-group"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="pay_card" name="pay_method" value="Card"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="pay_card"&gt;Card&lt;/label&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="radio-group"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" id="pay_apple" name="pay_method" value="Apple Pay"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="pay_apple"&gt;Apple Pay&lt;/label&gt;<br>
+          &nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;/fieldset&gt;<br><br>
+
+          &nbsp;&nbsp;&lt;fieldset&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Card details&lt;/legend&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form-group"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="card_name"&gt;Name on card:&lt;/label&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="card_name" name="card_name"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form-group"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="card_number"&gt;Card number:&lt;/label&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="card_number" name="card_number" placeholder="1234 5678 9012 3456"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form-row"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form-group"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="expiry"&gt;Expiry (MM/YY):&lt;/label&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="expiry" name="expiry" placeholder="MM/YY"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="form-group"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="cvv"&gt;CVV:&lt;/label&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="cvv" name="cvv" placeholder="123"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&lt;/fieldset&gt;<br><br>
+
+          &nbsp;&nbsp;&lt;div class="form-actions"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="submit"&gt;Pay Now&lt;/button&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="reset"&gt;Reset&lt;/button&gt;<br>
+          &nbsp;&nbsp;&lt;/div&gt;<br>
+          &lt;/form&gt;
+        </code>
+
+        <p><strong>Rendered element:</strong></p>
+
+        <form class="payment-form">
+          <fieldset>
+            <legend>Buyer details</legend>
+
+            <div class="form-group">
+              <label for="buyer_name">Name:</label>
+              <input type="text" id="buyer_name" name="buyer_name">
+            </div>
+
+            <div class="form-group">
+              <label for="buyer_email">Email:</label>
+              <input type="text" id="buyer_email" name="buyer_email">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Gift card amount</legend>
+
+            <div class="radio-group">
+              <input type="radio" id="amt_25" name="gift_amount" value="25">
+              <label for="amt_25">$25</label>
+            </div>
+
+            <div class="radio-group">
+              <input type="radio" id="amt_50" name="gift_amount" value="50">
+              <label for="amt_50">$50</label>
+            </div>
+
+            <div class="radio-group">
+              <input type="radio" id="amt_100" name="gift_amount" value="100">
+              <label for="amt_100">$100</label>
+            </div>
+          </fieldset>
+
+
+          <fieldset>
+            <legend>Card details</legend>
+
+            <div class="form-group">
+              <label for="card_name">Name on card:</label>
+              <input type="text" id="card_name" name="card_name">
+            </div>
+
+            <div class="form-group">
+              <label for="card_number">Card number:</label>
+              <input type="text" id="card_number" name="card_number" placeholder="1234 5678 9012 3456">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="expiry">Expiry (MM/YY):</label>
+                <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
+              </div>
+
+              <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="123">
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit">Pay Now</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+
+
+      <section class="element">
+        <h3>Checkout Cart</h3>
+
+        <!-- learnt from https://www.w3schools.com/howto/howto_css_checkout_form.asp -->
+        <!-- in order to make it look better, i would need to add css styling, but the assignmnet says no styling yet-->
+        <p><strong>Code:</strong></p>
+        <code>
+            &lt;h4&gt;Cart&lt;/h4&gt;<br><br>
+            &lt;p&gt;Walk-in Pottery Painting &lt;span&gt;$35&lt;/span&gt;&lt;/p&gt;<br>
+            &lt;p&gt;Guided Pottery Class &lt;span&gt;$55&lt;/span&gt;&lt;/p&gt;<br><br>
+            &lt;hr&gt;<br><br>
+            &lt;p&gt;&lt;strong&gt;Total: $90&lt;/strong&gt;&lt;/p&gt;
+          </code>
+
+        <p><strong>Rendered element:</strong></p>
+        <h4>Cart</h4>
+
+        <div class="cart-item">
+          <img src="img/image3.png" alt="Walk-in pottery painting item">
+
+          <div class="cart-text">
+            <p class="cart-title">Walk-in Pottery Painting</p>
+            <p class="cart-price">$35</p>
+          </div>
+        </div>
+
+        <div class="cart-item">
+          <img src="img/image4.png" alt="Guided pottery class item">
+
+          <div class="cart-text">
+            <p class="cart-title">Guided Pottery Class</p>
+            <p class="cart-price">$55</p>
+          </div>
+        </div>
+
+        <hr class="cart-divider">
+
+        <p class="cart-total">
+          <strong>Total</strong>
+          <strong>$90</strong>
+        </p>
+
+
+      </section>
+
+    </section>
+    <!-- // COMBINED ELEMENTS SECTION -->
+
+
+
+   
+    
+
+    <!-- BRANDING SECTION (Branding Ideas + Brand Components) // -->
+    <section id="branding">
+      <h2>Branding</h2>
+
+      <!-- BASIC BRANDING IDEAS (inside Branding) // -->
+      <section id="branding_ideas">
+        <h3>Basic Branding Ideas</h3>
+
+        <section class="element">
+          <h4>What does the company do or offer?</h4>
+          <p>
+            The Glazing Studio is a pottery painting studio that offers walk-in ceramic painting sessions, guided
+            classes,
+            and group pottery painting experiences. Customers can choose from a variety of ceramic pieces, select glaze
+            colors, and paint at their own pace in a relaxed studio environment. Finished pieces are glazed and fired by
+            the studio and are ready for pickup after completion.
+          </p>
+        </section>
+
+        <section class="element">
+          <h4>Who is the company to potential customers?</h4>
+          <p>
+            If The Glazing Studio were a person, it would be calm, welcoming, and encouraging. The studio feels patient
+            with beginners, supportive without being overwhelming, and genuinely excited about creativity. It reassures
+            customers that there is no right or wrong way to create, making everyone feel comfortable exploring pottery
+            painting regardless of their experience level.
+          </p>
+        </section>
+
+        <section class="element">
+          <h4>Why might this company entice someone to purchase a product or service?</h4>
+          <p>
+            The Glazing Studio entices customers by offering a low-pressure and enjoyable creative escape from everyday
+            routines. It provides a hands-on experience where people can relax, spend time with friends or family, and
+            create something personal and meaningful. The welcoming atmosphere, flexible session options, and the
+            promise
+            of a finished ceramic piece make the studio appealing for both casual visits and special occasions.
+          </p>
+        </section>
+
+      </section>
+      <!-- // BASIC BRANDING IDEAS -->
+
+      <!-- BRAND COMPONENTS (inside Branding) // -->
+      <section id="brand_components">
+        <h3>Brand Components</h3>
+
+        <section class="element">
+          <h3>Fonts</h3>
+
+          <p>
+            The Glazing Studio uses a clean, modern type system that feels calm, welcoming, and creative.
+          </p>
+
+          <p><strong>Primary Heading Font:</strong> Commissioner (Black 900)</p>
+          <p>
+            Used for major headings such as the studio name and section titles.
+          </p>
+
+          <!-- a visible font sample  -->
+          <p><strong>Rendered font sample:</strong></p>
+          <p class="font-sample font-heading">The Glazing Studio</p>
+
+          <p><strong>Code (how the sample is shown):</strong></p>
+          <code>
+          &lt;p class="font-sample font-heading"&gt;The Glazing Studio&lt;/p&gt;
+        </code>
+
+          <p><strong>Body Text Font:</strong> Noto Sans (Regular 400)</p>
+          <p>
+            Used for paragraphs and longer descriptive text to ensure readability and a relaxed tone.
+          </p>
+
+          <!--  visible body font sample -->
+          <p><strong>Rendered font sample:</strong></p>
+          <p class="font-sample font-body">
+            Welcome to The Glazing Studio, a creative space where you can relax and paint at your own pace. We offer
+            walk-in ceramic painting sessions, guided classes,
+            and group pottery painting experiences. Customers can choose from a variety of ceramic pieces, select glaze
+            colors, and paint at their own pace in a relaxed studio environment. Finished pieces are glazed and fired by
+            the studio and are ready for pickup after completion.
+          </p>
+
+          <p><strong>Code (how the sample is shown):</strong></p>
+          <code>
+          &lt;p class="font-sample font-body"&gt;Welcome to The Glazing Studio...&lt;/p&gt;
+        </code>
+
+          <p>
+            Font references:<br>
+            <a href="https://fonts.google.com/specimen/Commissioner" target="_self">Commissioner on Google Fonts</a><br>
+            <a href="https://fonts.google.com/noto/specimen/Noto+Sans" target="_self">Noto Sans on Google Fonts</a>
+          </p>
+        </section>
+
+        <section class="element">
+          <h3>Colour Palette</h3>
+
+          <p>
+            The color palette is designed to feel calm and professional, while still referencing creativity and warmth.
+          </p>
+
+          <!-- visual color swatches  -->
+          <ul class="color-palette">
+            <li><span class="swatch swatch-primary-blue" aria-hidden="true"></span> <strong>Primary Blue (Headings &
+                Links):</strong> rgb(31, 51, 181) / #1F33B5</li>
+            <li><span class="swatch swatch-charcoal" aria-hidden="true"></span> <strong>Charcoal (Body Text):</strong>
+              #2B2B2B</li>
+            <li><span class="swatch swatch-offwhite" aria-hidden="true"></span> <strong>Soft Off-White
+                (Background):</strong> #F7F4EF</li>
+            <li><span class="swatch swatch-clay" aria-hidden="true"></span> <strong>Clay Accent (Highlights &
+                Buttons):</strong> #C65A3A</li>
+            <li><span class="swatch swatch-gold" aria-hidden="true"></span> <strong>Glaze Gold (Secondary
+                Accent):</strong> #D9A441</li>
+          </ul>
+
+          <p><strong>Code:</strong></p>
+          <code>
+          &lt;li&gt;&lt;span class="swatch swatch-primary-blue"&gt;&lt;/span&gt; ... #1F33B5&lt;/li&gt;
+        </code>
+
+          <p>
+            Blue provides clarity and trust, charcoal keeps text readable, and warm clay and gold accents reference
+            pottery and glaze materials.
+          </p>
+        </section>
+
+        <section class="element" id="brand-application">
+          <h3>Brand Application Sample</h3>
+
+          <p>
+            This sample demonstrates how typography, colour, imagery, and interaction work together in a realistic page
+            section for The Glazing Studio website.
+          </p>
+
+         
+
+          <p><strong>Rendered element:</strong></p>
+
+          <!-- HERO / INTRO COMPOSITION SAMPLE -->
+          <section class="brand-hero" aria-label="Brand introduction sample">
+
+            <!-- background image for hero section -->
+            <img src="img/image2.png" alt="" class="brand-hero-bg" aria-hidden="true">
+
+            <div class="brand-hero-content">
+              <h1>Welcome to The Glazing Studio</h1>
+
+              <div class="brand-hero-box">
+                <p>
+                  The Glazing Studio is a calm and welcoming pottery painting space where creativity feels
+                  <em>accessible and pressure-free</em>. Whether you are stopping by for a walk-in session or booking a
+                  guided
+                  class, our studio encourages visitors to paint at their own pace and enjoy the process.
+                </p>
+
+                <p>
+                  Learn more about our <a href="#classes">pottery painting classes</a> or explore our available services
+                  below.
+                </p>
+              </div>
+            </div>
+          </section>
+
+
+          <!-- Product listing heading to separate sections -->
+          <h2>Our Services</h2>
+
+          <div class="service-list">
+
+            <article class="service-item">
+              <a href="#classes">
+                <img src="img/image3.png" alt="Walk-in pottery painting sample piece and glaze colors">
+              </a>
+              <div class="service-text">
+                <h3>Walk-In Pottery Painting</h3>
+                <p>
+                  Paint at your own pace with a wide selection of ceramic pieces, from mugs and plates to decorative
+                  items, and create something uniquely your own.
+                </p>
+
+                <p class="service-price">$25 per piece</p>
+              </div>
+            </article>
+
+            <article class="service-item">
+              <a href="#classes">
+                <img src="img/image4.png" alt="Guided pottery class session in progress">
+              </a>
+              <div class="service-text">
+                <h3>Guided Pottery Classes</h3>
+                <p>
+                  Instructor-led pottery painting sessions for all skill levels, offering step-by-step guidance and
+                  support throughout the creative process.
+                </p>
+
+
+                <p class="service-price">$45 per person</p>
+              </div>
+            </article>
+
+            <article class="service-item">
+              <a href="#groups">
+                <img src="img/group_painting.png" alt="Group pottery painting session at a shared table">
+              </a>
+              <div class="service-text">
+                <h3>Group Pottery Painting Sessions</h3>
+                <p>
+                  Ideal for birthdays, team events, and celebrations, these group pottery painting sessions encourage
+                  shared creativity in a relaxed and social setting.
+                </p>
+
+                <p class="service-price">Starting at $40 per person</p>
+              </div>
+            </article>
+
+          </div>
+
+
+          <section class="element">
+            <h3>Imagery and Art Direction</h3>
+
+            <ul>
+              <li>Warm, candid photography inside the studio</li>
+              <li>People painting pottery together at shared tables</li>
+              <li>Close-ups of hands, brushes, glaze, and ceramic textures</li>
+              <li>Natural lighting and relaxed compositions</li>
+            </ul>
+
+            <p>
+              The imagery should communicate a calm, welcoming, and pressure-free creative environment.
+            </p>
+
+            <p><strong>Rendered imagery samples:</strong></p>
+
+            <!-- IMAGE SOURCES: https://bellespottery.com/blog/f/pottery-painting-ideas-unleash-your-inner-artist -->
+            <!-- IMAGE SOURCES: https://scenebooking.com/product/ceramic-pot-painting/ -->
+
+            <div class="imagery-samples">
+              <img src="img/group_painting.png" alt="People painting pottery together in the studio">
+              <img src="img/image1.png" alt="Close-up of pottery painting process">
+              <img src="img/image2.png" alt="Paint brushes and glaze colors on a table">
+              <img src="img/image3.png" alt="Finished ceramic pieces displayed on shelves">
+            </div>
+
+            <p><strong>Code:</strong></p>
+            <code>
+  &lt;div class="imagery-samples"&gt;<br>
+  &nbsp;&nbsp;&lt;img src="img/group_painting.png" alt="..."&gt;<br>
+  &nbsp;&nbsp;&lt;img src="img/image1.png" alt="..."&gt;<br>
+  &nbsp;&nbsp;&lt;img src="img/image2.png" alt="..."&gt;<br>
+  &nbsp;&nbsp;&lt;img src="img/image3.png" alt="..."&gt;<br>
+  &lt;/div&gt;
+</code>
+
+          </section>
+
+        </section>
+        <!-- // BRAND COMPONENTS -->
+      </section>
+      <!-- // BRANDING SECTION -->
+    </section>
+
+    <!-- PAGE SECTIONS (for Main Navigation links) // -->
+    <section id="home">
+      <h2>Home</h2>
+      <p>Welcome to The Glazing Studio. Explore our classes, group sessions, and studio information below.</p>
+    </section>
+
+    <section id="classes">
+      <h2>Product / Service Listing Page Template: CLASSES</h2>
+
+      <nav class="main-nav" aria-label="Product page navigation">
+        <a href="#home">Home</a>
+        <a href="#classes">Classes</a>
+        <a href="#groups">Group Sessions</a>
+        <a href="#cart">Cart</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+
+      <!-- PRODUCT / SERVICE LISTING PAGE TEMPLATE CONTENT -->
+      <!-- goal: a full page structure: intro + multiple listings + clear call to action -->
+      <section class="page-template product-template" aria-label="Product listing page template">
+
+        <header class="page-header">
+          <h3>Pottery Painting Classes</h3>
+          <p>
+            Choose a session type below. Each option includes materials and studio support. Pick one to learn more.
+          </p>
+        </header>
+
+        <!-- multiple product listing (more than 3, so it clearly counts as a listing page) -->
+        <div class="service-list">
+
+
+          <article class="service-item">
+            <a href="#cart">
+              <img src="img/image3.png" alt="Walk-in pottery painting sample piece and glaze colors">
+            </a>
+            <div class="service-text">
+              <h3>Walk-In Pottery Painting</h3>
+              <p>Drop in anytime and paint a ceramic piece at your own pace.</p>
+              <p class="service-price">$25 per piece</p>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <a href="#cart">
+              <img src="img/image4.png" alt="Guided pottery class session in progress">
+            </a>
+            <div class="service-text">
+              <h3>Guided Pottery Class</h3>
+              <p>Instructor-led session with techniques, tips, and support throughout.</p>
+              <p class="service-price">$45 per person</p>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <a href="#cart">
+              <img src="img/group_painting.png" alt="Group pottery painting session at a shared table">
+            </a>
+            <div class="service-text">
+              <h3>Group Painting Session</h3>
+              <p>Celebrate with friends, coworkers, or family at a shared painting table.</p>
+              <p class="service-price">Starting at $40 per person</p>
+
+            </div>
+          </article>
+
+          <!-- added a few more so it reads like a real listing page -->
+          <article class="service-item">
+            <a href="#cart">
+              <img src="img/image1.png" alt="Close-up of pottery painting process">
+            </a>
+            <div class="service-text">
+              <h3>Beginner Technique Mini Class</h3>
+              <p>Learn brush control, layering, and simple patterns in a short session.</p>
+              <p class="service-price">$30 per person</p>
+
+            </div>
+          </article>
+
+          <article class="service-item">
+            <a href="#cart">
+              <!-- this image is my own that I took when i visited a pottery studio last year-->
+              <img src="img/glazing.png" alt="Paint brushes and glaze colors on a table">
+            </a>
+            <div class="service-text">
+              <h3>Glaze Exploration Workshop</h3>
+              <p>Experiment with glaze combos and effects with guided suggestions.</p>
+              <p class="service-price">$50 per person</p>
+
+            </div>
+          </article>
+
+          <article class="service-item">
+            <a href="#cart">
+              <!-- image source: https://www.craftymonkeypotterypainting.com/christmas-gift-options/christmas-pottery-painting -->
+              <img src="img/themed.png" alt="Finished ceramic pieces displayed on shelves">
+            </a>
+            <div class="service-text">
+              <h3>Seasonal Theme Night</h3>
+              <p>A themed session with inspiration prompts and featured pieces.</p>
+              <p class="service-price">$35 per person</p>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+    </section>
+
+    <section id="groups">
+      <h2>Group Sessions</h2>
+      <p>Planning a birthday, team event, or celebration? Reserve a group pottery painting session.</p>
+    </section>
+
+    <section id="cart">
+      <h2>Checkout web-page Template</h2>
+      <p>This section combines navigation, a cart summary, and a payment form (checkout layout).</p>
+
+      <!-- CHECKOUT PAGE NAV -->
+      <nav class="main-nav" aria-label="Checkout page navigation">
+        <a href="#home">Home</a>
+        <a href="#classes">Classes</a>
+        <a href="#groups">Group Sessions</a>
+        <a href="#cart">Cart</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+
+      <!-- CHECKOUT PAGE TEMPLATE CONTENT -->
+      <!-- goal: cart + payment form on one page -->
+      <section class="page-template checkout-template" aria-label="Checkout page template">
+
+        <h3>Checkout</h3>
+        <p>Confirm your cart items and fill out the payment form below to complete your purchase.</p>
+
+
+        <!-- this wrapper is for layout (ex: 2 columns on wide screens, stacked on small screens) -->
+        <div class="checkout-layout">
+
+          <!-- CART SUMMARY -->
+          <section class="cart-summary" aria-label="Cart summary">
+            <h4>Your Cart</h4>
+
+            <div class="cart-item">
+              <img src="img/image3.png" alt="Walk-in pottery painting item">
+
+              <div class="cart-text">
+                <p class="cart-title">Walk-in Pottery Painting</p>
+                <p class="cart-price">$35</p>
+              </div>
+            </div>
+
+            <div class="cart-item">
+              <img src="img/image4.png" alt="Guided pottery class item">
+
+              <div class="cart-text">
+                <p class="cart-title">Guided Pottery Class</p>
+                <p class="cart-price">$55</p>
+              </div>
+            </div>
+
+            <hr class="cart-divider">
+
+            <p class="cart-total">
+              <strong>Total</strong>
+              <strong>$90</strong>
+            </p>
+
+          
+            <a class="button-nav" href="#classes">Continue shopping</a>
+          </section>
+
+          <!-- PAYMENT FORM (reusing your form structure, but as part of the checkout page template) -->
+          <section class="payment-area" aria-label="Payment form area">
+            <h4>Payment</h4>
+
+            <form class="payment-form">
+              <fieldset>
+                <legend>Buyer details</legend>
+
+                <div class="form-group">
+                  <label for="checkout_name">Name:</label>
+                  <input type="text" id="checkout_name" name="checkout_name">
+                </div>
+
+                <div class="form-group">
+                  <label for="checkout_email">Email:</label>
+                  <input type="text" id="checkout_email" name="checkout_email">
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Payment method</legend>
+
+                <div class="radio-group">
+                  <input type="radio" id="checkout_card" name="checkout_method" value="Card">
+                  <label for="checkout_card">Card</label>
+                </div>
+
+                <div class="radio-group">
+                  <input type="radio" id="checkout_apple" name="checkout_method" value="Apple Pay">
+                  <label for="checkout_apple">Apple Pay</label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Card details</legend>
+
+                <div class="form-group">
+                  <label for="checkout_card_name">Name on card:</label>
+                  <input type="text" id="checkout_card_name" name="checkout_card_name">
+                </div>
+
+                <div class="form-group">
+                  <label for="checkout_card_number">Card number:</label>
+                  <input type="text" id="checkout_card_number" name="checkout_card_number"
+                    placeholder="1234 5678 9012 3456">
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="checkout_expiry">Expiry (MM/YY):</label>
+                    <input type="text" id="checkout_expiry" name="checkout_expiry" placeholder="MM/YY">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="checkout_cvv">CVV:</label>
+                    <input type="text" id="checkout_cvv" name="checkout_cvv" placeholder="123">
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="form-actions">
+                <button type="submit">Pay Now</button>
+                <button type="reset">Reset</button>
+              </div>
+            </form>
+
+          </section>
+
+        </div>
+
+      </section>
+
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email us or visit the studio for walk-ins, bookings, and questions.</p>
+    </section>
+    <!-- // PAGE SECTIONS -->
+
+
+    <!-- CITATIONS FOR ALL THE IMAGES + FONTS USED-->
+    <section id="citations">
+      <h3>Citations</h3>
+    
+      <ul>
+        <!-- FONTS -->
+        <li>
+          Google. (n.d.). <strong>Commissioner</strong> [Font]. Google Fonts.
+          Retrieved from
+          <a href="https://fonts.google.com/specimen/Commissioner">
+            https://fonts.google.com/specimen/Commissioner
+          </a>
+          (Accessed Jan 27, 2026).
+        </li>
+    
+        <li>
+          Google. (n.d.). <strong>Noto Sans</strong> [Font]. Google Fonts.
+          Retrieved from
+          <a href="https://fonts.google.com/specimen/Noto+Sans">
+            https://fonts.google.com/specimen/Noto+Sans
+          </a>
+          (Accessed Jan 27, 2026).
+        </li>
+    
+        <!-- IMAGES -->
+        <li>
+          Social Pottery. (n.d.). <strong>Children pottery painting session</strong> [Photograph].
+          Retrieved from
+          <a href="https://socialpottery.com/children/">
+            https://socialpottery.com/children/
+          </a>
+          (Accessed Jan 29, 2026).
+        </li>
+    
+        <li>
+          Belle’s Pottery. (n.d.). <strong>Pottery painting ideas</strong> [Photograph].
+          Retrieved from
+          <a href="https://bellespottery.com/blog/f/pottery-painting-ideas-unleash-your-inner-artist">
+            https://bellespottery.com/blog/f/pottery-painting-ideas-unleash-your-inner-artist
+          </a>
+          (Accessed Jan 24, 2026).
+        </li>
+    
+        <li>
+          Scene Booking. (n.d.). <strong>Ceramic pot painting</strong> [Photograph].
+          Retrieved from
+          <a href="https://scenebooking.com/product/ceramic-pot-painting/">
+            https://scenebooking.com/product/ceramic-pot-painting/
+          </a>
+          (Accessed Jan 26, 2026).
+        </li>
+    
+        <li>
+          Instagram. (2025). <strong>Pottery painting studio post</strong> [Photograph].
+          Retrieved from
+          <a href="https://www.instagram.com/p/DQ4cLlzjbEY/">
+            https://www.instagram.com/p/DQ4cLlzjbEY/
+          </a>
+          (Accessed February 2, 2026).
+        </li>
+    
+        <li>
+          Create Make Space. (n.d.). <strong>Pottery classes</strong> [Photograph].
+          Retrieved from
+          <a href="https://createmakerspace.com/classes/pottery-classes">
+            https://createmakerspace.com/classes/pottery-classes
+          </a>
+          (Accessed February 2, 2026).
+        </li>
+    
+        <!-- MY OWN IMAGE -->
+        <li>
+          Sagri, Manmeet. (2025). <strong>Glazing studio materials</strong> [Photograph].
+          Personal collection.
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+</body>
+
+</html>

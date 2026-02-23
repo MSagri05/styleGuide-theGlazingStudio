@@ -1,0 +1,498 @@
+/*
+  STYLE GUIDE STYLING 
+  Default styling for the style guide 
+*/
+body {
+  font-family: 'Noto Sans', sans-serif;
+  /* FIRST.. CHANGED THE DEFAULT font to noto sans */
+  color:#2B2B2B;
+}
+
+/* setting fonts for the headings */
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Commissioner', sans-serif;
+}
+
+/* TYPE HIERARCHY ------------------- */
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #1F33B5;
+  /* Primary Blue */
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 4rem;
+  /* sections feel clearly separated */
+  margin-bottom: 1rem;
+  color: #1F33B5;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2B2B2B;
+  /* Charcoal */
+}
+
+h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: #2B2B2B;
+}
+
+.element {
+  border-top-width: 0.15rem;
+  border-top-style: solid;
+  border-top-color: black;
+}
+
+/* TASK 3: IN-TEXT LINK STYLING */
+p a {
+  color: rgb(198, 90, 58);
+  text-decoration: underline;
+}
+
+p a:hover,
+p a:focus {
+  color: rgb(217, 164, 65);
+  /*hover to change to gold color */
+  font-style: italic;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: none;
+}
+
+code {
+  background-color: #EEE;
+}
+
+
+
+/* 
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+/* shared button look for BOTH <a> and <button> */
+.button-nav,
+button {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.5rem 0.75rem; /* SAME padding */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none; /* makes <a> match buttons */
+  transition: background-color 0.5s;
+}
+
+/* make sure links don't change color like normal links */
+.button-nav {
+  color: white;
+  background-color: rgb(198, 90, 58);
+}
+
+/* hover/focus for link-button */
+.button-nav:hover,
+.button-nav:focus {
+  background-color: rgb(217, 164, 65);
+  /* Glaze gold */
+}
+
+
+/* learnt form button stylings from https://stackoverflow.com/questions/14950238/can-you-style-html-form-buttons-with-css */
+button[type="submit"] {
+  background-color: rgb(198, 90, 58);
+  /* clay */
+  color: white;
+}
+
+button[type="reset"] {
+  background-color: rgb(220, 220, 220);
+  color: #000;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: rgb(217, 164, 65);
+  /* gold */
+}
+
+button[type="reset"]:hover,
+button[type="reset"]:focus {
+  background-color: rgb(180, 180, 180);
+}
+
+
+
+/* -----------------------------
+   FORM LABEL + TEXT INPUTS
+------------------------------ */
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  font-family: "Noto Sans", sans-serif;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+input[type="text"]:hover {
+  border-color: #555;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: rgb(198, 90, 58);
+  /* clay */
+  background-color: #f2f2f2;
+  /* subtle focus cue */
+}
+
+
+
+/* -----------------------------
+   FLEX FIX: FORM GROUP + ACTIONS
+   learnt this from building forms by shay howe's site + also used w3 schools site to understand display options https://www.w3schools.com/css/css3_flexbox.asp
+------------------------------ */
+
+
+
+
+
+/* -----------------------------
+   RADIO BUTTON WITH LABEL
+------------------------------ */
+
+.radio-group label {
+  display: inline;
+  font-weight: 400;
+  margin: 0;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+  accent-color: rgb(198, 90, 58);
+  /* clay */
+  cursor: pointer;
+}
+
+
+
+/* -----------------------------
+   IMAGE AS A LINK
+------------------------------ */
+
+a img {
+  border-radius: 10px;
+  transition: opacity 0.35s ease, transform 0.35s ease, outline 0.35s ease;
+}
+
+/* Hover + keyboard focus feedback */
+a:hover img,
+a:focus img {
+  opacity: 0.85;
+  transform: scale(1.05);
+  /* grow a bit on hover */
+  outline: 4px solid rgb(198, 90, 58);
+  /* clay */
+  outline-offset: 4px;
+}
+
+
+
+/* -----------------------------
+   MAIN NAVIGATION
+------------------------------ */
+
+#combined_elements nav {
+  background-color: rgb(198, 90, 58);
+  /* clay */
+}
+
+#combined_elements nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, font-style 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover + focus state */
+#combined_elements nav a:hover,
+#combined_elements nav a:focus {
+  color: rgb(217, 164, 65);
+  /* glaze gold */
+  font-style: italic;
+  transform: scale(1.05);
+}
+
+/* Keyboard accessibility */
+#combined_elements nav a:focus-visible {
+  outline: 3px solid rgb(217, 164, 65);
+  outline-offset: 4px;
+}
+
+/* reusable main navigation styling (same look as combined_elements nav) */
+.main-nav {
+  background-color: rgb(198, 90, 58);
+  /* clay */
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, font-style 0.3s ease, transform 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: rgb(217, 164, 65);
+  /* glaze gold */
+  font-style: italic;
+  transform: scale(1.05);
+}
+
+.main-nav a:focus-visible {
+  outline: 3px solid rgb(217, 164, 65);
+  outline-offset: 4px;
+}
+
+
+
+/* -----------------------------
+   PRODUCT / SERVICE LISTING
+------------------------------ */
+
+.service-item {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: #F7F4EF;
+}
+
+.service-item img {
+  border-radius: 10px;
+}
+
+.service-text h3,
+.service-text h4 {
+  margin-top: 0;
+}
+
+.service-price {
+  color: rgb(198, 90, 58);
+  /* clay */
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+
+
+
+/* 
+   PAYMENT FORM
+ */
+
+.payment-form fieldset {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+}
+
+.payment-form legend {
+  font-weight: 700;
+  padding: 0 0.4rem;
+  color: #2B2B2B;
+}
+
+
+
+/* -----------------------------
+   CHECKOUT CART
+------------------------------ */
+
+.cart-item img {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Title */
+.cart-title {
+  margin: 0;
+  font-weight: 600;
+  color: #2B2B2B;
+}
+
+/* Price below title */
+.cart-price {
+  margin-top: 0.25rem;
+  font-weight: 600;
+  color: #C65A3A; /* clay accent */
+}
+
+.cart-total {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+
+
+/* 
+  BRAND COMPONENTS (FONT + COLOR VISUAL SAMPLES) -------------------
+
+*/
+
+.font-heading {
+  font-family: "Commissioner", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.font-body {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.swatch {
+  border: 1px solid #000;
+}
+
+/* Swatch colors */
+.swatch-primary-blue {
+  background-color: #1F33B5;
+}
+
+.swatch-charcoal {
+  background-color: #2B2B2B;
+}
+
+.swatch-offwhite {
+  background-color: #F7F4EF;
+}
+
+.swatch-clay {
+  background-color: #C65A3A;
+}
+
+.swatch-gold {
+  background-color: #D9A441;
+}
+
+
+
+/* 
+   BRAND HERO (COMPOSITION SAMPLE)
+*/
+
+.brand-hero {
+  border-radius: 12px;
+  background-color: #F7F4EF;
+}
+
+/* background image */
+.brand-hero-bg {
+  opacity: 0.6; 
+}
+
+.brand-hero h1 {
+  /* uses  existing heading font + blue */
+  color: #1F33B5;
+}
+
+.brand-hero-box {
+  border-radius: 10px;
+
+  /* translucent textbox */
+  background-color: rgba(247, 244, 239, 0.82);
+
+  /* subtle border so it reads on busy backgrounds */
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+
+
+/* -------------------------------------------------
+   BRAND COMPOSITION SAMPLE
+   Shows fonts + colors + imagery together.
+-------------------------------------------------- */
+
+.brand-title {
+  font-family: "Commissioner", sans-serif;
+  font-weight: 900;
+  color: #1F33B5;
+  /* Primary Blue */
+  margin-top: 0.75rem;
+}
+
+.brand-body {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  color: #2B2B2B;
+  /* Charcoal */
+}
+
+
+
+
+/* -------------------------------------------------
+   PAGE TEMPLATES (PRODUCT LISTING + CHECKOUT)
+   styling-only helpers so the templates look consistent
+-------------------------------------------------- */
+
+/* PRODUCT / SERVICE LISTING PAGE (cards) */
+.product-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: #F7F4EF;
+  padding: 1.25rem;
+}
+
+.product-card h3 {
+  margin-top: 0;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-meta {
+  margin-top: 0.5rem;
+}
+
+.product-price {
+  color: rgb(198, 90, 58); /* clay */
+  font-weight: 700;
+  margin: 0.25rem 0 0 0;
+}
+
+/* CHECKOUT PAGE (cart + payment) */
+.checkout-cart {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: #F7F4EF;
+  padding: 1.25rem;
+}
+
+.checkout-payment .payment-form {
+  margin-top: 0.5rem;
+}
+
+/* make sure nav link hover doesn't underline on these templates either */
+.main-nav a:hover,
+.main-nav a:focus {
+  text-decoration: none;
+}
